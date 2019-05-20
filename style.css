@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+nav, footer {
+    background-color: black;
+}
+
+a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+footer, a {
+    color: white;
+}
+
+.menu {
+    float: right;
+}
+
+nav {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.project img {
+    width: 98%;
+}
+
+.main-img > img {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.row .projects {
+    float: left;
+    width: 33.33%;
+}
+
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+button {
+    display: block;
+    width: 98%;
+    border: none;
+    padding: 5px;
+    background-color: grey;
+}
+
+footer {
+    margin: 5px 0;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+*[class*="col-"] {
+    float: left;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .col-4 {
+        width: 100%;
+    }
+    .icon {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .menu > a:not(:last-child) {
+        display: none;
+    }
+   
+    .menu.responsive {
+        float: none;
+    }
+
+    .menu.responsive > a {
+        display: block;
+    }
+}
